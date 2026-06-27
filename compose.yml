@@ -9,7 +9,7 @@ services:
     networks:
       - mynetwork
       
-  auth:
+  auth_service:
     image: harsha0310/pyapp:auth_image
     deploy:
       replicas: 1
@@ -20,7 +20,7 @@ services:
     depends_on:
       - db
     
-  book:
+  book_service:
     image: harsha0310/pyapp:book_image
     deploy:
       replicas: 1
@@ -31,7 +31,7 @@ services:
     depends_on:
       - db
     
-  borrow:
+  borrow_service:
     image: harsha0310/pyapp:borrow_image
     deploy:
       replicas: 1
